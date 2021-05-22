@@ -1,0 +1,37 @@
+apt update && apt upgrade -y
+
+termux-setup-storage
+
+pkg install -y git
+
+pkg install -y python
+
+pkg install -y python2
+
+pip install --upgrade pip
+
+pip install requests
+
+git clone https://github.com/entynetproject/quack
+
+cd quack
+
+pip install -r requirements.txt
+
+chmod 711 quack
+
+-------------------------------------------------------------------------------------
+
+Até o momento a ferramenta já está instalada corretamente, agora para executá-la e 
+iniciar o spam devemos usar o seguinte comando:
+
+python quack --tool SMS --target +553597481295 --threads 10 --timeout 60
+
+Ao usar este comando, o spam começará no número de telefone colocado 
+naquele comando, eu dou um exemplo de como o comando funciona: 
+
+[--target] = (o número da sua vítima) 
+
+[--threads] = (Número de mensagens) 
+
+[--timeout] = (tempo de duração da mensagem)
